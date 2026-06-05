@@ -1,9 +1,15 @@
-
 op = ""
 
 while op != "0":
-  num1 = int(input("Insira o primeiro valor: "))
-  num2 = int(input("Insira o segundo valor: "))
+  while True:
+    try:
+      num1 = int(input("Insira o primeiro valor: "))
+      num2 = int(input("Insira o segundo valor: "))
+      break
+    except ValueError:
+      print("Ops! Valor inválido. Digite um número.")
+
+
   print("Escolha a operação desejada: \n1 - Adição \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \n0 - para terminar o programa")
   op = input()
 
